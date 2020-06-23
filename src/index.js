@@ -1,17 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import "./styles.css";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+class App extends React.Component {
+  render() {
+    return <div className="content">
+      <div className="header">
+        <h1 className="header__title">WatchList</h1>
+        
+        <form className="search">
+          <input className="search__bar" type="text" placeholder="Your movie" />
+          <input className="search__add" type="submit" value="Add" />
+        </form>
+      </div>
+
+      <ul className="list">
+        <li className="list__item">
+          <input className="list__check" type="checkbox" id="1" />
+          <label className="list__label" for="1">Avengers</label>
+        </li>
+        <li className="list__item">
+          <input className="list__check" type="checkbox" id="2" />
+          <label className="list__label" for="2">Avengers: Age of Ultron</label>
+        </li>
+        <li className="list__item">
+          <input className="list__check" type="checkbox" id="3" />
+          <label className="list__label" for="3">Avengers: Infinity War</label>
+        </li>
+      </ul>
+    </div>
+  }
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
