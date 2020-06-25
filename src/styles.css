@@ -15,7 +15,13 @@
     height: 90vh;
     border-radius: 32px;
     border: solid 8px #FFC107;
-    overflow: scroll;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#root::-webkit-scrollbar {
+    display: none;
 }
 
 body {
