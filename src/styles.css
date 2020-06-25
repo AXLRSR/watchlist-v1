@@ -13,6 +13,7 @@
     background-color: #FFF;
     width: 320px;
     height: 90vh;
+    max-height: 620px;
     border-radius: 32px;
     border: solid 8px #FFC107;
     overflow: auto;
@@ -38,6 +39,7 @@ body {
     #root {
         width: 100vw;
         height: 100vh;
+        max-height: none;
         border-radius: 0;
         border: none;
     }
